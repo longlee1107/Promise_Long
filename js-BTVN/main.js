@@ -1,5 +1,5 @@
 async function _searchArticles() {
-    await fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-02-28&sortBy=publishedAt&apiKey=d174720f7f28494eb86e576061f0cc64')
+    await fetch('https://newsapi.org/v2/everything?q=${value}&from=2022-02-28&sortBy=publishedAt&apiKey=d174720f7f28494eb86e576061f0cc64')
         .then(response => response.json())
         .then(data => {
             let ulArticles = document.querySelector('.articles');
